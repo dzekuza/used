@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Item Rental App - Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+  <section id="add-item-section">
+    <h2>Add New Item</h2>
+    <form id="add-item-form">
+      <label for="item-title">Title:</label>
+      <input type="text" id="item-title" name="title" required />
+
+      <label for="item-images">Images (URLs, comma separated):</label>
+      <input type="text" id="item-images" name="images" placeholder="http://example.com/image1.jpg, http://example.com/image2.jpg" />
+
+      <label for="item-description">Description:</label>
+      <textarea id="item-description" name="description" rows="4" required></textarea>
+
+      <label for="item-features">Features (comma separated):</label>
+      <input type="text" id="item-features" name="features" placeholder="Feature1, Feature2" />
+
+      <label for="item-discount">Discount (days:percentage, comma separated):</label>
+      <input type="text" id="item-discount" name="discount" placeholder="3:10, 7:20" />
+
+      <button type="submit">Add Item</button>
+    </form>
+  </section>
+
+  <section id="items-list-section">
+    <h2>Your Items</h2>
+    <div id="items-list"></div>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
